@@ -1,0 +1,33 @@
+# Boilerplate Compojure Project using Enlive for Templating
+
+A boilerplate project for creating a web app using [Compojure][1] and [Enlive][2]
+
+## Prerequisites
+* You will need [Leiningen][1] 2.5.0 or above installed.
+* You will need [Java][1] (JDK).
+* If using IntelliJ as your IDE you will need the [Cursive][3] plugin  _(remove other clojure plugins)_
+
+## Running
+
+To start a web server for the application, run:
+
+    lein run
+    
+To access the site, go to your browser and open up `http://localhost:8080`.
+
+## Structure
+
+The application uses Clojure on the back-end and [Http-kit][5] is used as the http-client.
+
+### Templating
+In order to create views, the application uses [Enlive][2] to populate template HTML files 
+## Deploying to Heroku
+
+In order to deploy to Heroku you will need to add a proc file with the following content:  
+    web: lein run -m main $PORT
+
+[1]: https://github.com/technomancy/leiningen
+[2]: https://github.com/cgrand/enlive
+[3]: https://cursiveclojure.com
+[4]: https://github.com/fhd/clostache
+[5]: http://http-kit.org
